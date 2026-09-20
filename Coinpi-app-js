@@ -1,0 +1,43 @@
+const coin = document.getElementById("diamondCoin");
+const rotateBtn = document.getElementById("rotateBtn");
+const status = document.getElementById("status");
+
+let rotation = 45;
+
+rotateBtn.addEventListener("click", async () => {
+
+    rotation += 180;
+
+    coin.style.transform =
+        `rotate(${rotation}deg) rotateX(12deg)`;
+
+    status.textContent = "ROTATING";
+
+    setTimeout(() => {
+        status.textContent = "ONLINE";
+    }, 800);
+
+    // Send event to Flask backend
+    try {
+
+        await fetch("/api/coin/rotate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                symbol: "π",
+                action: "rotate"
+            })
+        });
+
+    } catch (error) {
+
+        console.log(
+            "Backend unavailable:",
+            error
+        );
+
+    }
+
+});
