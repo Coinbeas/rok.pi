@@ -1,0 +1,447 @@
+💎 Diamond Pi Coin
+
+Mainnet-ready Digital Asset & Wallet Platform
+
+Diamond Pi Coin is a modern digital asset platform designed for wallet management, asset tracking, transaction processing, and blockchain-ready infrastructure.
+
+The project supports PI, BTC, ETH, and USDT through a responsive dashboard, Flask REST API, and PostgreSQL database architecture.
+
+«🚀 Project Status: Mainnet-ready Architecture
+⚠️ Blockchain Status: This repository does not by itself represent a live public blockchain mainnet.»
+
+---
+
+✨ Features
+
+- 💎 Diamond Pi Coin (PI) dashboard
+- 💰 Digital asset portfolio management
+- 🪙 PI, BTC, ETH & USDT asset support
+- 👛 Multi-asset wallet architecture
+- 📊 Portfolio and asset value tracking
+- 🔄 Transfer and transaction architecture
+- 📜 Transaction ledger
+- 🌐 Flask RESTful API
+- 🐘 PostgreSQL database
+- ☁️ Cloud SQL compatible architecture
+- 🔐 Authentication-ready backend
+- 🧾 Transaction references and transaction hashes
+- 📱 Responsive mobile-friendly interface
+- 🧑‍🏫 Project Teacher architecture
+- ❤️ Health-check API
+- 🧩 Modular backend structure
+- 🚀 GitHub Actions CI workflow
+
+---
+
+🏗️ Project Architecture
+
+Diamond Pi Coin
+│
+├── 💻 Web Dashboard
+│   ├── Portfolio
+│   ├── Wallets
+│   ├── Assets
+│   └── Transactions
+│
+├── 🐍 Flask Backend
+│   ├── REST API
+│   ├── Authentication
+│   ├── Wallet Services
+│   └── Transaction Services
+│
+├── 🐘 PostgreSQL
+│   ├── Users
+│   ├── Assets
+│   ├── Wallets
+│   └── Transactions
+│
+├── 🧑‍🏫 Project Teacher
+│   ├── Code Explanation
+│   ├── Database Lessons
+│   ├── API Lessons
+│   ├── Debug Assistant
+│   └── Project Checklist
+│
+└── 🔗 Future Blockchain Layer
+    ├── Network
+    ├── Nodes
+    ├── Consensus
+    ├── Wallet Signing
+    ├── Explorer
+    └── RPC
+
+---
+
+📁 Project Structure
+
+diamond-pi-coin/
+│
+├── app.py
+├── config.py
+├── requirements.txt
+├── .env.example
+├── .gitignore
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── database/
+│   ├── schema.sql
+│   └── triggers.sql
+│
+├── api/
+│   ├── auth.py
+│   ├── assets.py
+│   ├── wallet.py
+│   └── transactions.py
+│
+├── templates/
+│   ├── login.html
+│   └── index.html
+│
+└── static/
+    ├── style.css
+    └── app.js
+
+---
+
+🪙 Supported Assets
+
+Symbol| Asset| Type
+PI| Diamond Pi Coin| Crypto / Native Asset
+BTC| Bitcoin| Crypto
+ETH| Ethereum| Crypto
+USDT| Tether USD| Crypto / Stablecoin
+
+Asset prices and balances shown in the dashboard are application data unless connected to independently verifiable blockchain and market-price sources.
+
+---
+
+🐘 Database
+
+Diamond Pi Coin uses PostgreSQL as its primary relational database.
+
+Core Tables
+
+users
+assets
+wallets
+transactions
+
+Users
+
+Stores account information and authentication-related identifiers.
+
+Assets
+
+Stores supported digital assets, symbols, names, types, and pricing data.
+
+Wallets
+
+Stores user balances, locked balances, asset relationships, and deposit addresses.
+
+Transactions
+
+Stores:
+
+- Deposit
+- Withdrawal
+- Transfer
+- Send
+- Receive
+- Swap
+- Amount
+- Fee
+- Status
+- Reference
+- Transaction hash
+
+The database architecture uses high-precision numeric fields suitable for digital-asset accounting.
+
+---
+
+🌐 REST API
+
+Health Check
+
+GET /api/health
+
+Assets
+
+GET /api/assets
+
+Wallet
+
+GET /api/wallet
+
+Transactions
+
+GET /api/transactions
+
+Transfer
+
+POST /api/transfer
+
+Example request:
+
+{
+  "asset": "PI",
+  "amount": "10.000000000000000000",
+  "recipient": "wallet-address"
+}
+
+«Production transactions should be authenticated, authorized, validated, recorded atomically, and protected against replay/duplicate requests.»
+
+---
+
+🔐 Security
+
+The production architecture is designed to support:
+
+- Secure authentication
+- Password hashing
+- Session/JWT authentication
+- Role-based authorization
+- Server-side wallet operations
+- Database transactions
+- Input validation
+- Transaction authorization
+- Audit logging
+- Environment-based secrets
+- API rate limiting
+- Secure key management
+
+Private keys and sensitive credentials should never be committed to GitHub.
+
+---
+
+💎 Diamond Pi Coin
+
+The dashboard represents Diamond Pi Coin as the native platform asset.
+
+Example UI:
+
+💎 Diamond Pi Coin
+
+PI Balance
+307.1583 PI
+
+Locked / Staked
+55.0000 PI
+
+Portfolio
+PI + BTC + ETH + USDT
+
+Values displayed in examples are demonstration/application values unless independently connected to verified sources.
+
+---
+
+🧑‍🏫 Project Teacher
+
+Diamond Pi Coin includes a planned Project Teacher module for development guidance.
+
+🧑‍🏫 Project Teacher
+
+├── Code Teacher
+├── Database Teacher
+├── API Teacher
+├── Blockchain Teacher
+├── Debug Assistant
+├── Security Checklist
+└── Step-by-Step Lessons
+
+The teacher module can explain project code, database structures, API endpoints, errors, and development steps.
+
+---
+
+🔗 Blockchain Roadmap
+
+The current repository provides a mainnet-ready application architecture, not a complete public blockchain network.
+
+Future blockchain infrastructure may include:
+
+- [ ] Blockchain protocol specification
+- [ ] Node software
+- [ ] P2P networking
+- [ ] Consensus implementation
+- [ ] Block structure
+- [ ] Transaction signing
+- [ ] Wallet/key management
+- [ ] RPC service
+- [ ] Blockchain explorer
+- [ ] Network monitoring
+- [ ] Testnet
+- [ ] Security audit
+- [ ] Public mainnet deployment
+
+---
+
+🛠️ Technology Stack
+
+Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive UI
+
+Backend
+
+- Python
+- Flask
+- REST API
+
+Database
+
+- PostgreSQL
+- Cloud SQL compatible
+- High-precision numeric accounting
+
+Development
+
+- Git
+- GitHub
+- GitHub Actions
+- Python 3.12+
+
+---
+
+⚙️ Local Development
+
+1. Clone Repository
+
+git clone https://github.com/Coinbeas/diamond-pi-coin.git
+cd diamond-pi-coin
+
+2. Create Virtual Environment
+
+python -m venv .venv
+
+3. Activate Environment
+
+Linux/macOS:
+
+source .venv/bin/activate
+
+Windows:
+
+.venv\Scripts\activate
+
+4. Install Dependencies
+
+pip install -r requirements.txt
+
+5. Configure Environment
+
+Create ".env":
+
+DATABASE_URL=postgresql://USER:PASSWORD@HOST:5432/diamond_pi_coin
+SECRET_KEY=change-this-secret
+
+6. Initialize Database
+
+psql "$DATABASE_URL" -f database/schema.sql
+
+7. Start Flask
+
+python app.py
+
+Open:
+
+http://127.0.0.1:5000
+
+---
+
+🧪 Testing
+
+Run Python syntax validation:
+
+python -m py_compile app.py
+
+GitHub Actions automatically checks the project on pushes and pull requests targeting the "main" branch.
+
+---
+
+📊 Development Roadmap
+
+v1.0.0
+
+- [x] Dashboard architecture
+- [x] PI asset interface
+- [x] BTC/ETH/USDT support
+- [x] PostgreSQL schema
+- [x] Flask REST API
+- [x] Transaction ledger
+- [x] Responsive interface
+
+v1.1.0
+
+- [ ] User authentication
+- [ ] User registration
+- [ ] Wallet authorization
+- [ ] Recipient-based transfers
+- [ ] Idempotency protection
+- [ ] Audit logs
+- [ ] Admin dashboard
+- [ ] Project Teacher UI
+
+v2.0.0
+
+- [ ] Blockchain testnet
+- [ ] Wallet signing
+- [ ] RPC infrastructure
+- [ ] Explorer
+- [ ] Node infrastructure
+- [ ] Verified price integration
+
+Future
+
+- [ ] Public network deployment
+- [ ] Security audit
+- [ ] Production monitoring
+- [ ] Mainnet infrastructure
+
+---
+
+⚠️ Important Status Notice
+
+Diamond Pi Coin is currently an application and blockchain-ready architecture project.
+
+The repository's dashboard, database, API, and sample asset values do not independently establish:
+
+- a live public blockchain;
+- a functioning decentralized consensus network;
+- independently verified PI market value;
+- real on-chain balances;
+- real blockchain transaction settlement.
+
+A live mainnet requires independently operating network infrastructure, verifiable chain data, transaction signing, consensus, node software, secure key management, and production security controls.
+
+---
+
+📜 License
+
+This project is released under the MIT License.
+
+See ""LICENSE"" (LICENSE) for details.
+
+---
+
+🚀 Project Status
+
+Project:        Diamond Pi Coin
+Version:        v1.0.0
+Architecture:   Mainnet-ready
+Backend:        Flask
+Database:       PostgreSQL
+API:            RESTful
+Assets:         PI / BTC / ETH / USDT
+CI:             GitHub Actions
+Blockchain:     Future / Not yet established as live mainnet
+
+---
+
+💎 Diamond Pi Coin
+
+Build the platform. Secure the architecture. Verify the network.
