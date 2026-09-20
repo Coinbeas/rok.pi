@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #123b72 0%,
+            #07111f 45%,
+            #02060d 100%
+        );
+
+    color: white;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin-section {
+    text-align: center;
+}
+
+.coin-stage {
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 900px;
+}
+
+/* Main Diamond */
+
+.diamond-pi {
+    width: 165px;
+    height: 165px;
+
+    position: relative;
+
+    transform:
+        rotate(45deg)
+        rotateX(12deg);
+
+    border: 4px solid rgba(255,255,255,.95);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #dff5ff 18%,
+            #70c8ff 38%,
+            #1769e8 55%,
+            #9edcff 72%,
+            #ffffff 100%
+        );
+
+    box-shadow:
+        0 0 18px rgba(77,166,255,.95),
+        0 0 45px rgba(30,130,255,.65),
+        inset 8px 8px 20px rgba(255,255,255,.9),
+        inset -12px -12px 25px rgba(0,45,120,.55);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Crystal reflection */
+
+.diamond-pi::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 35%,
+            rgba(255,255,255,.9) 36%,
+            rgba(255,255,255,.1) 43%,
+            transparent 44%
+        );
+
+    mix-blend-mode: screen;
+
+    pointer-events: none;
+}
+
+/* Inner face */
+
+.coin-face {
+    width: 108px;
+    height: 108px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgba(255,255,255,.8);
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #ffffff,
+            #7dd3ff 32%,
+            #1769e8 65%,
+            #041b4a 100%
+        );
+
+    box-shadow:
+        inset 0 0 25px rgba(255,255,255,.65),
+        0 0 18px rgba(255,255,255,.5);
+}
+
+/* Pi */
+
+.coin-face span {
+
+    transform: rotate(-45deg);
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    font-size: 82px;
+
+    font-weight: 900;
+
+    color: #07111f;
+
+    text-shadow:
+        0 2px 0 white,
+        0 0 8px rgba(255,255,255,.9),
+        0 0 20px rgba(80,180,255,.9);
+}
+
+h1 {
+    margin-top: 10px;
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin-top: 8px;
+
+    color: #9fdcff;
+}
+
+/* Information */
+
+.coin-info {
+
+    margin: 25px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.coin-info div {
+
+    min-width: 85px;
+
+    padding: 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    backdrop-filter: blur(10px);
+}
+
+.coin-info small {
+    display: block;
+
+    font-size: 9px;
+
+    color: #7fbfff;
+
+    margin-bottom: 5px;
+}
+
+.coin-info strong {
+    font-size: 13px;
+}
+
+/* Button */
+
+button {
+
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #287cff,
+            #00b7ff
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(40,124,255,.5);
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .25s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 30px
+        rgba(40,180,255,.8);
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .coin-stage {
+        width: 250px;
+        height: 250px;
+    }
+
+    .diamond-pi {
+        width: 140px;
+        height: 140px;
+    }
+
+    .coin-face {
+        width: 92px;
+        height: 92px;
+    }
+
+    .coin-face span {
+        font-size: 68px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
