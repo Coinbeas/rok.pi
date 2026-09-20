@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diamond π Coin</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="coin-section">
+
+            <div class="coin-stage">
+
+                <div class="diamond-pi" id="diamondCoin">
+                    <div class="coin-face">
+                        <span>π</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <h1>Diamond π Coin</h1>
+
+            <p class="subtitle">
+                Digital Crystal Coin
+            </p>
+
+            <div class="coin-info">
+
+                <div>
+                    <small>SYMBOL</small>
+                    <strong>π</strong>
+                </div>
+
+                <div>
+                    <small>TYPE</small>
+                    <strong>DIAMOND</strong>
+                </div>
+
+                <div>
+                    <small>STATUS</small>
+                    <strong id="status">ONLINE</strong>
+                </div>
+
+            </div>
+
+            <button id="rotateBtn">
+                Rotate Coin
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
